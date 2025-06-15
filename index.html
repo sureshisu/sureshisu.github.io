@@ -32,29 +32,30 @@
     /* Section styles */
     .section {
       padding: 40px 20px;
-      display: none; /* Hidden by default */
+      display: none;
     }
 
     .active-section {
-      display: block; /* Show when active */
+      display: block;
     }
 
-    /* About section layout */
+    /* ABOUT layout */
     .about-container {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
+      gap: 30px;
     }
 
     .about-container img {
-      max-width: 200px;
-      height: auto;
-      margin-right: 30px;
+      max-width: 100%;
       border-radius: 10px;
     }
 
     .about-text {
-      max-width: 600px;
+      flex: 1;
+      line-height: 1.8;
+      text-align: justify;
     }
   </style>
 </head>
@@ -68,36 +69,37 @@
     <button onclick="showSection('experience')">EXPERIENCE</button>
   </div>
 
-<!-- ABOUT Section -->
-<!-- ABOUT Section -->
-<div class="section active-section" id="about">
-  <div class="about-container">
-    <div>
-      <img src="myphoto.jpeg" alt="My Photo">
-      <h3 style="margin-top: 10px;">Suresh Murugaiyan</h3>
-    </div>
-    <div class="about-text">
-      <h3>Biography</h3>
-      <p style="text-align: justify; line-height: 1.8;">
-      I'm an aerospace engineer with a focus on applied physics, experienced in computational magneto-hydrodynamics and fluid modeling in plasma physics. Currently, I'm a postdoctoral research associate at the Translational AI Center (TrAC), exploring machine learning and high performance computing using GPU programming for fluid dynamic and magneto-hydrodynamic simulations.
+  <!-- ABOUT Section -->
+  <div class="section active-section" id="about">
+    <div class="about-container">
+      
+      <!-- Left Column: Image -->
+      <div style="flex: 0 0 220px;">
+        <img src="myphoto.jpeg" alt="My Photo">
+        <h3 style="margin-top: 10px;">Suresh Murugaiyan</h3>
+      </div>
 
-      I received my Ph.D in Aerospace Engineering from Virginia Tech, where my research focused on studying fusion-relevant liquid metal dynamics for Z-Pinch fusion experiments. 
+      <!-- Right Column: Text -->
+      <div class="about-text">
+        <h3>Biography</h3>
+        <p>
+        I'm an aerospace engineer with a focus on applied physics, experienced in computational magneto-hydrodynamics and fluid modeling in plasma physics. Currently, I'm a postdoctoral research associate at the Translational AI Center (TrAC), exploring machine learning and high performance computing using GPU programming for fluid dynamic and magneto-hydrodynamic simulations.
 
-      My areas of interest includes magneto-hydrodynamics for engineering applications and space physics, fluid modeling in plasma physics, electromagnetism and magneto-hydrodynamic turbulence. I'm also interested in exploring relativistic magneto-hydrodynamics.
+        I received my Ph.D in Aerospace Engineering from Virginia Tech, where my research focused on studying fusion-relevant liquid metal dynamics for Z-Pinch fusion experiments. 
 
-      Outside of work, I enjoy swimming, hiking, snowboarding, and reading fiction.
+        My areas of interest includes magneto-hydrodynamics for engineering applications and space physics, fluid modeling in plasma physics, electromagnetism and magneto-hydrodynamic turbulence. I'm also interested in exploring relativistic magneto-hydrodynamics.
 
-      </p>
+        Outside of work, I enjoy swimming, hiking, snowboarding, and reading fiction.
+        </p>
 
-      <h3>Education</h3>
-      <p>B.S., M.S., Ph.D. in XYZ...</p>
+        <h3>Education</h3>
+        <p>B.S., M.S., Ph.D. in XYZ...</p>
 
-      <h3>Research Interests</h3>
-      <p>Computational fluid dynamics, machine learning, etc.</p>
+        <h3>Research Interests</h3>
+        <p>Computational fluid dynamics, machine learning, etc.</p>
+      </div>
     </div>
   </div>
-</div>
-
 
   <!-- PUBLICATIONS Section -->
   <div class="section" id="publications">
@@ -117,6 +119,7 @@
     <p>[Academic, industry, or teaching experience]</p>
   </div>
 
+  <!-- Tab switch script -->
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll('.section');
