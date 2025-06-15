@@ -1,13 +1,103 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Welcome to My Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Section styles */
+    .section {
+      padding: 40px 20px;
+    }
+
+    /* About section layout */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .about-container img {
+      max-width: 200px;
+      height: auto;
+      margin-right: 30px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello! I'm Your Name</h1>
-  <p>This is my personal GitHub website.</p>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="#about">ABOUT</a>
+    <a href="#publications">PUBLICATIONS</a>
+    <a href="#projects">RESEARCH PROJECTS</a>
+    <a href="#experience">EXPERIENCE</a>
+  </div>
+
+  <!-- ABOUT Section -->
+  <div class="section" id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="myphoto.jpeg" alt="Your Photo">
+      <div class="about-text">
+        <h3>Biography</h3>
+        <p>Short bio goes here...</p>
+
+        <h3>Education</h3>
+        <p>B.S., M.S., Ph.D. in XYZ...</p>
+
+        <h3>Research Interests</h3>
+        <p>Computational fluid dynamics, machine learning, etc.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS Section -->
+  <div class="section" id="publications">
+    <h2>Publications</h2>
+    <p>[Add your publications here]</p>
+  </div>
+
+  <!-- RESEARCH PROJECTS Section -->
+  <div class="section" id="projects">
+    <h2>Research Projects</h2>
+    <p>[List your research projects here]</p>
+  </div>
+
+  <!-- EXPERIENCE Section -->
+  <div class="section" id="experience">
+    <h2>Experience</h2>
+    <p>[Academic, industry, or teaching experience]</p>
+  </div>
+
 </body>
 </html>
 
