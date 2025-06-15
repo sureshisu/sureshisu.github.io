@@ -15,22 +15,28 @@
       overflow: hidden;
     }
 
-    .navbar a {
+    .navbar button {
       float: left;
-      display: block;
+      background-color: inherit;
+      border: none;
       color: white;
-      text-align: center;
       padding: 14px 20px;
-      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
     }
 
-    .navbar a:hover {
+    .navbar button:hover {
       background-color: #575757;
     }
 
     /* Section styles */
     .section {
       padding: 40px 20px;
+      display: none; /* Hidden by default */
+    }
+
+    .active-section {
+      display: block; /* Show when active */
     }
 
     /* About section layout */
@@ -56,14 +62,14 @@
 
   <!-- Navigation Bar -->
   <div class="navbar">
-    <a href="#about">ABOUT</a>
-    <a href="#publications">PUBLICATIONS</a>
-    <a href="#projects">RESEARCH PROJECTS</a>
-    <a href="#experience">EXPERIENCE</a>
+    <button onclick="showSection('about')">ABOUT</button>
+    <button onclick="showSection('publications')">PUBLICATIONS</button>
+    <button onclick="showSection('projects')">RESEARCH PROJECTS</button>
+    <button onclick="showSection('experience')">EXPERIENCE</button>
   </div>
 
   <!-- ABOUT Section -->
-  <div class="section" id="about">
+  <div class="section active-section" id="about">
     <h2>About Me</h2>
     <div class="about-container">
       <img src="myphoto.jpeg" alt="Your Photo">
@@ -98,6 +104,13 @@
     <p>[Academic, industry, or teaching experience]</p>
   </div>
 
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active-section'));
+      document.getElementById(sectionId).classList.add('active-section');
+    }
+  </script>
+
 </body>
 </html>
-
