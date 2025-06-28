@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Suresh Murugaiyan</title>
   <style>
     body {
@@ -105,17 +106,59 @@
         padding: 20px;
       }
     }
+    /* --- hamburger menu rules --- */
+.toggle-btn {
+  display: none;               /* keep hidden on big screens */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+.nav-links {                   /* container for the four buttons */
+  display: flex;               /* default desktop layout */
+}
+
+/* phones & tablets: ≤768 px */
+@media (max-width: 768px) {
+  .toggle-btn {                /* show the ☰ icon */
+    display: block;
+  }
+
+  .nav-links {                 /* hide the links until ☰ clicked */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .nav-links button {          /* stack buttons full-width */
+    float: none;
+    text-align: left;
+    border-top: 1px solid #575757;
+  }
+}
+
   </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <div class="navbar">
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <!-- hamburger / ☰ icon -->
+  <button class="toggle-btn" onclick="toggleNav()">&#9776;</button>
+
+  <!-- actual links – hidden on phones until ☰ is pressed -->
+  <div class="nav-links" id="navLinks">
     <button onclick="showSection('about')">ABOUT</button>
     <button onclick="showSection('publications')">PUBLICATIONS</button>
     <button onclick="showSection('projects')">RESEARCH PROJECTS</button>
     <button onclick="showSection('experience')">EXPERIENCE</button>
   </div>
+</nav>
+
 
   <!-- Main layout -->
   <div class="main-wrapper">
@@ -363,6 +406,11 @@
       sections.forEach(section => section.classList.remove('active-section'));
       document.getElementById(sectionId).classList.add('active-section');
     }
+    function toggleNav() {
+  const nav = document.getElementById('navLinks');
+  nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+}
+
   </script>
 
 </body>
