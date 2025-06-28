@@ -108,14 +108,18 @@
     }
     /* --- hamburger menu rules --- */
 .toggle-btn {
-  display: none;               /* keep hidden on big screens */
-  background: none;
+  display: none;
+  background-color: #333;
   border: none;
   color: white;
-  font-size: 26px;
-  padding: 14px 20px;
+  font-size: 34px;         /* <-- larger icon */
+  padding: 12px 20px;
   cursor: pointer;
+  width: 100%;             /* <-- span full width */
+  text-align: left;        /* <-- align to left */
+  box-sizing: border-box;
 }
+
 
 .nav-links {                   /* container for the four buttons */
   display: flex;               /* default desktop layout */
@@ -123,23 +127,47 @@
 
 /* phones & tablets: ≤768 px */
 @media (max-width: 768px) {
-  .toggle-btn {                /* show the ☰ icon */
+  .main-wrapper {
+    flex-direction: column;
+  }
+
+  .left-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .left-column .social-links a {
+    display: inline-block;
+    margin: 6px 10px 0;
+  }
+
+  .right-column {
+    padding: 20px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toggle-btn {
     display: block;
   }
 
-  .nav-links {                 /* hide the links until ☰ clicked */
+  .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
     background-color: #333;
   }
 
-  .nav-links button {          /* stack buttons full-width */
+  .nav-links button {
     float: none;
     text-align: left;
     border-top: 1px solid #575757;
   }
 }
+
 
   </style>
 </head>
