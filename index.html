@@ -190,14 +190,35 @@
 
 
 
-  </style>
+    /* --- added explicit bar styles --- */
+  .toggle-btn .bar {
+    display:block;
+    width:32px;     /* default desktop size */
+    height:3px;
+    margin:5px 0;
+    background:#fff;
+  }
+
+  /* bigger bars on small screens */
+  @media (max-width: 768px) {
+    .toggle-btn .bar {
+      width:48px;
+      height:4px;
+    }
+  }
+
+</style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
 <nav class="navbar">
   <!-- hamburger / ☰ icon -->
-  <button class="toggle-btn" onclick="toggleNav()">&#9776;</button>
+<button class="toggle-btn" onclick="toggleNav()">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
 
   <!-- actual links – hidden on phones until ☰ is pressed -->
   <div class="nav-links" id="navLinks">
