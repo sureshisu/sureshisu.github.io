@@ -255,8 +255,10 @@
     <div class="right-column">
 
       <!-- ABOUT Section -->
-      <div class="section active-section" id="about">
-        <h3>Biography</h3>
+<!-- ABOUT Section -->
+<div class="section active-section" id="about">
+  <img src="Banner.jpeg" alt="Research Banner" style="width:100%; max-width:1400px; height:auto; display:block; margin:0 auto 30px auto; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+  <h3>Biography</h3>
         <p>
           I'm an aerospace engineer with a focus on applied physics, experienced in computational magneto-hydrodynamics and fluid modeling in plasma physics. Currently, I'm a postdoctoral research associate at the Translational AI Center (TrAC), exploring machine learning and high performance computing for fluid dynamic and magneto-hydrodynamic simulations.
           <br><br>
@@ -340,6 +342,12 @@
 <h2 style="margin-top: 40px;">Conferences</h2>
 <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
   <li style="margin-bottom: 20px;">
+    <strong>Characterization of Non-Newtonian Materials Using Droplet Rise Simulations</strong><br>
+    Suresh Murugaiyan, Cheng-Hau Yang, Dhruv Gamdha, Adarsh Krishnamurthy, Baskar Ganapathysubramanian<br>
+    Presented at 18th U.S. National Congress on Computational Mechanics (USNCCM18), Chicago, Illinois, USA, July 2025<br>
+    <a href="https://drive.google.com/file/d/1-foGTC76t9eK8ViyBiKPSpDWngjNW6U3/view" target="_blank">View Abstract</a>
+  </li>
+  <li style="margin-bottom: 20px;">
     <strong>Large Eddy Simulation of Magnetohydrodynamic Turbulence</strong><br>
     Suresh Murugaiyan, Bhuvana Srinivasan, Stefano Brizzolara<br>
     Presented at AGU Fall Meeting, San Francisco, California, USA, December 2019<br>
@@ -372,19 +380,39 @@
   <div class="section" id="projects">
     <h2>Research Projects</h2>
 
-    <!-- Project 1 -->
+      <!-- Project 1 -->
+      <p>
+        <strong>Turbulent Flow Past an Airfoil</strong><br>Oct 2025<br>
+        Translational AI Center
+      </p>
+      <ul style="padding-left: 20px; line-height: 1.6;">
+       <li>Simulated 3D turbulent flow over a NACA0012 airfoil at a chord Reynolds number of 6 million using a variational multiscale (VMS) finite element framework.</li>
+        <li>Used VMS formulation to separate resolved and subgrid scales, enabling  turbulence modeling through variational projection without empirical closure models.</li>
+        <li>Obtained surface pressure and flow structures in good agreement with NASA CFL3D data, capturing coherent vortical features near the airfoil surface.</li>
+      </ul>
 
-    <!-- Project 1 -->
+
+      <!-- Project 1 -->
+      <p>
+        <strong>Simulation of Droplet Dynamics in Non-Newtonian Fluids</strong><br>
+        Oct 2025<br>
+        Translational AI Center
+      </p>
+      <ul style="padding-left: 20px; line-height: 1.6;">
+        <li>Used Cahn-Hilliard-Navier-Stokes (CHNS) framework to simulate how a non-Newtonian DLP (Digital Light Processing) resin rises through another immiscible fluid.</li>
+        <li>Trained a neural network to learn the viscosity-shear rate relationship directly from data, with Lipschitz regularization to suppress overfitting.</li>
+        <li>Employed Octree-based adaptive mesh refinement within the finite element framework to efficiently capture interface dynamics.</li>
+      </ul>
 
     <!-- Project 1 -->
       <p>
-        <strong>Modeling the Dynamics of Liquid Metal in Fusion Liquid Walls Using Maxwell–Navier–Stokes Equations</strong><br>
+        <strong>Modeling the Dynamics of Liquid Metal in Fusion Liquid Walls Using Maxwell-Navier-Stokes Equations</strong><br>
         Dec 2023<br>
         Virginia Tech
       </p>
       <ul style="padding-left: 20px; line-height: 1.6;">
-        <li>Developed a novel Maxwell–Navier–Stokes solver, written in C, for single and two-phase flow problems in the presence of electromagnetic fields.</li>
-        <li>Reformulated Maxwell’s equations in their potential form to accurately represent the fusion liquid wall under study.</li>
+        <li>Developed a novel Maxwell-Navier-Stokes solver, written in C, for single and two-phase flow problems in the presence of electromagnetic fields.</li>
+        <li>Reformulated Maxwell's equations in their potential form to accurately represent the fusion liquid wall under study.</li>
         <li>Incorporated the skin effect due to eddy currents, enabling precise representation of fluid behavior in unsteady electromagnetic conditions.</li>
       </ul>
 
