@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Suresh Murugaiyan</title>
+  <title>Research · Suresh Murugaiyan</title>
   <meta name="description" content="Suresh Murugaiyan is a postdoctoral research associate at the Translational AI Center, Iowa State University, working on scientific machine learning, high-performance computing, magnetohydrodynamics, and fluid modeling in plasma physics.">
   <meta name="author" content="Suresh Murugaiyan">
   <meta property="og:site_name" content="Suresh Murugaiyan">
-  <meta property="og:title" content="Suresh Murugaiyan">
+  <meta property="og:title" content="Research · Suresh Murugaiyan">
   <meta property="og:description" content="Suresh Murugaiyan is a postdoctoral research associate at the Translational AI Center, Iowa State University, working on scientific machine learning, high-performance computing, magnetohydrodynamics, and fluid modeling in plasma physics.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sureshisu.github.io/">
+  <meta property="og:url" content="https://sureshisu.github.io/research.html">
   <meta property="og:image" content="https://sureshisu.github.io/img/suresh.jpg">
   <meta name="theme-color" content="#1f5fa8">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -27,8 +27,8 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Primary">
-      <a href="index.html" class="active" aria-current="page">About</a>
-      <a href="research.html">Research</a>
+      <a href="index.html">About</a>
+      <a href="research.html" class="active" aria-current="page">Research</a>
       <a href="publications.html">Publications</a>
       <a href="experience.html">Experience</a>
     </nav>
@@ -61,70 +61,93 @@
   </aside>
   <main class="content">
     <section class="card">
-      <h1>About</h1>
+      <h1>Research</h1>
+      <figure>
+        <img src="img/airfoil-vortices.jpg" alt="Isosurfaces of vortical structures in turbulent flow over a NACA0012 airfoil" width="470" height="350">
+        <figcaption>Coherent vortical structures in 3D turbulent flow over a NACA0012 airfoil at a chord Reynolds number of 6 million, computed with a variational multiscale finite element framework.</figcaption>
+      </figure>
       <p class="lead">
-        I am an aerospace engineer with a focus on applied physics, experienced in computational
-        magnetohydrodynamics and fluid modeling in plasma physics. I am currently a postdoctoral research
-        associate at the <a href="https://trac-ai.iastate.edu/" target="_blank" rel="noopener">Translational AI Center (TrAC)</a>
-        at Iowa State University, where I explore machine learning and high-performance computing for
-        fluid dynamic and magnetohydrodynamic simulations.
+        My research sits at the intersection of computational fluid dynamics, electromagnetism, and
+        scientific machine learning. I develop numerical solvers and data-driven models for fluids that
+        interact with electromagnetic fields, with applications ranging from fusion energy to plasma
+        physics, and I use high-performance computing to push these simulations to realistic scales.
       </p>
       <p>
-        I received my Ph.D. in Aerospace Engineering from Virginia Tech, where my research focused on
-        fusion-relevant liquid metal dynamics for Z-pinch fusion experiments. My dissertation developed a
-        Maxwell&ndash;Navier&ndash;Stokes solver for single- and two-phase flows of electrically conducting
-        liquids in unsteady electromagnetic fields.
+        Current work at the Translational AI Center focuses on variational multiscale finite element
+        methods for turbulent and multiphase flows, neural-network closures learned directly from
+        experimental data, and operator-learning surrogates for time-dependent flow over complex
+        geometries. Earlier work at Virginia Tech developed Maxwell&ndash;Navier&ndash;Stokes solvers
+        for liquid metal flows in fusion liquid walls.
       </p>
-      <p>
-        My areas of interest include high-performance computing, scientific machine learning,
-        magnetohydrodynamics for engineering applications and space physics, fluid modeling in plasma
-        physics, electromagnetism, and magnetohydrodynamic turbulence.
-      </p>
-      <p>Outside of work, I enjoy swimming, hiking, snowboarding, and reading fiction.</p>
     </section>
 
     <section class="card">
-      <h2>Education</h2>
+      <h2>Research Projects</h2>
       <div class="entry">
-        <div class="when">Aug 2017 &ndash; May 2024</div>
+        <div class="when">Oct 2025<br><small>Translational AI Center</small></div>
         <div class="what">
-          <h3 class="org"><a href="https://www.aoe.vt.edu/" target="_blank" rel="noopener">Virginia Tech</a></h3>
-          <div class="sub">Ph.D., Aerospace Engineering &ndash; Applied Physics &middot; Blacksburg, VA, USA</div>
-          <p><strong>Dissertation:</strong> <em>Modeling the Dynamics of Liquid Metal in Fusion Liquid Walls Using Maxwell&ndash;Navier&ndash;Stokes Equations</em>
-          &nbsp;<a class="btn-link" href="https://vtechworks.lib.vt.edu/server/api/core/bitstreams/518f76b3-d5b1-4de2-a76d-3ad21cf5ce42/content" target="_blank" rel="noopener">PDF</a></p>
+          <h3>Turbulent Flow Past an Airfoil</h3>
+          <ul>
+            <li>Simulated 3D turbulent flow over a NACA0012 airfoil at a chord Reynolds number of 6 million using a variational multiscale (VMS) finite element framework.</li>
+            <li>Used the VMS formulation to separate resolved and subgrid scales, enabling turbulence modeling through variational projection without empirical closure models.</li>
+            <li>Obtained surface pressure and flow structures in good agreement with NASA CFL3D data, capturing coherent vortical features near the airfoil surface.</li>
+          </ul>
         </div>
       </div>
       <div class="entry">
-        <div class="when">Aug 2014 &ndash; May 2017</div>
+        <div class="when">Oct 2025<br><small>Translational AI Center</small></div>
         <div class="what">
-          <h3 class="org"><a href="https://www.aere.iastate.edu/" target="_blank" rel="noopener">Iowa State University</a></h3>
-          <div class="sub">M.S., Aerospace Engineering &middot; Ames, IA, USA</div>
-          <p><strong>Thesis:</strong> <em>A Comprehensive Study on Modeling Requirements into Value Formulation in a Satellite System Application</em>
-          &nbsp;<a class="btn-link" href="https://dr.lib.iastate.edu/server/api/core/bitstreams/eb668e0c-75e1-4d1b-a5d1-2d1292beb509/content" target="_blank" rel="noopener">PDF</a></p>
+          <h3>Droplet Dynamics in Non-Newtonian Fluids</h3>
+          <ul>
+            <li>Used a Cahn&ndash;Hilliard&ndash;Navier&ndash;Stokes (CHNS) framework to simulate how a non-Newtonian DLP (digital light processing) resin rises through another immiscible fluid.</li>
+            <li>Trained a neural network to learn the viscosity&ndash;shear-rate relationship directly from data, with Lipschitz regularization to suppress overfitting.</li>
+            <li>Employed octree-based adaptive mesh refinement within the finite element framework to efficiently capture interface dynamics.</li>
+          </ul>
         </div>
       </div>
       <div class="entry">
-        <div class="when">Aug 2007 &ndash; May 2011</div>
+        <div class="when">Dec 2023<br><small>Virginia Tech</small></div>
         <div class="what">
-          <h3 class="org"><a href="https://www.psgtech.edu/" target="_blank" rel="noopener">PSG College of Technology</a></h3>
-          <div class="sub">B.E., Mechanical Engineering &middot; Coimbatore, India</div>
-          <p><strong>Thesis:</strong> <em>Experimental and Computational Studies on the Performance of Air-Breathing PEM Fuel Cell</em></p>
+          <h3>Liquid Metal Dynamics in Fusion Liquid Walls</h3>
+          <ul>
+            <li>Developed a novel Maxwell&ndash;Navier&ndash;Stokes solver, written in C, for single- and two-phase flow problems in the presence of electromagnetic fields.</li>
+            <li>Reformulated Maxwell's equations in their potential form to accurately represent the fusion liquid wall under study.</li>
+            <li>Incorporated the skin effect due to eddy currents, enabling precise representation of fluid behavior in unsteady electromagnetic conditions.</li>
+          </ul>
         </div>
       </div>
-    </section>
-
-    <section class="card">
-      <h2>Research Interests</h2>
-      <ul class="interest-grid">
-        <li>Scientific Machine Learning</li>
-        <li>High Performance Computing</li>
-        <li>Numerical Methods (FEM, FVM)</li>
-        <li>Magnetohydrodynamics</li>
-        <li>Fluid Modeling in Plasma Physics</li>
-        <li>Electromagnetism</li>
-        <li>Turbulence</li>
-        <li>Multiphase Flows</li>
-      </ul>
+      <div class="entry">
+        <div class="when">Dec 2018<br><small>Virginia Tech</small></div>
+        <div class="what">
+          <h3>Transverse Magnetic Fields and Electrically Conducting Liquids</h3>
+          <ul>
+            <li>Developed a custom OpenFOAM solver to investigate the effects of transverse magnetic fields on the flow of electrically conducting liquids, using the electric potential formulation of magnetohydrodynamics.</li>
+            <li>Assessed how distributed Lorentz forces alter velocity and pressure distributions.</li>
+            <li>Conducted a parametric study to evaluate the impact of the Hartmann number on flow behavior.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">Dec 2016<br><small>Iowa State University</small></div>
+        <div class="what">
+          <h3>Value-Based Design of a Satellite System</h3>
+          <ul>
+            <li>Specialized in the design of complex systems and optimization, with a focus on heuristic coding techniques.</li>
+            <li>Explored the transition from traditional requirements-based design to value-based design in large-scale systems, illustrated by a satellite system.</li>
+            <li>Conducted sensitivity and uncertainty analyses to identify high-impact requirements on system value.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">Dec 2011<br><small>PSG College of Technology</small></div>
+        <div class="what">
+          <h3>Air-Breathing PEM Fuel Cell Performance</h3>
+          <ul>
+            <li>Conducted comprehensive research on air-breathing PEM fuel cells, spanning theoretical studies, experimental evaluations, and flow-field plate optimization.</li>
+            <li>Developed a 3D computational model using FLUENT, focusing on performance metrics and individual loss factors for ducted and planar cathode designs.</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 </div>
