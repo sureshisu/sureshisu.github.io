@@ -330,7 +330,7 @@ small, .muted { color: var(--muted); }
 
 /* ---------- Figures ---------- */
 figure {
-  margin: 0 0 1.5rem;
+  margin: 0 0 2rem;
   text-align: center;
 }
 figure img {
@@ -338,15 +338,30 @@ figure img {
   width: 100%;
   max-width: 560px;
   margin: 0 auto;
+  padding: 12px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   background: #fff;
 }
 figcaption {
   font-size: 0.9rem;
   color: var(--muted);
-  margin-top: 0.6rem;
+  margin-top: 0.75rem;
+  padding: 0 0.5rem;
   line-height: 1.5;
+}
+figure.wide img { max-width: 100%; }
+.fig-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+.fig-row figure { margin: 0; }
+.fig-row figure img { max-width: 100%; width: 100%; height: auto; aspect-ratio: 700 / 806; object-fit: contain; }
+.fig-row figure img.fit { object-fit: contain; }
+@media (max-width: 640px) {
+  .fig-row { grid-template-columns: 1fr; }
 }
 
 /* ---------- Footer ---------- */
