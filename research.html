@@ -77,7 +77,7 @@
       </figure>
       <figure class="wide">
         <img src="img/droplet-rise.jpg" alt="Time sequence of a non-Newtonian droplet rising through an immiscible fluid" width="1400" height="586">
-        <figcaption>Time sequence (left to right) of a non-Newtonian resin droplet rising through an immiscible fluid, simulated with a Cahn&ndash;Hilliard&ndash;Navier&ndash;Stokes framework and a neural-network viscosity closure. <a href="https://arxiv.org/abs/2605.30659" target="_blank" rel="noopener">[arXiv]</a></figcaption>
+        <figcaption>Time sequence (left to right) of a non-Newtonian silicone ink droplet rising through perfluorodecalin, simulated with a Cahn&ndash;Hilliard&ndash;Navier&ndash;Stokes framework and a neural-network viscosity closure. <a href="https://arxiv.org/abs/2605.30659" target="_blank" rel="noopener">[arXiv]</a></figcaption>
       </figure>
       <figure class="wide">
         <img src="img/liquid-wall.jpg" alt="Free surface evolution of a liquid metal fusion wall with current density streamlines and magnetic field" width="1400" height="1069">
@@ -116,9 +116,10 @@
         <div class="what">
           <h3>Droplet Dynamics in Non-Newtonian Fluids</h3>
           <ul>
-            <li>Used a Cahn&ndash;Hilliard&ndash;Navier&ndash;Stokes (CHNS) framework to simulate how a non-Newtonian DLP (digital light processing) resin rises through another immiscible fluid.</li>
-            <li>Trained a neural network to learn the viscosity&ndash;shear-rate relationship directly from data, with Lipschitz regularization to suppress overfitting.</li>
-            <li>Employed octree-based adaptive mesh refinement within the finite element framework to efficiently capture interface dynamics.</li>
+            <li>Developed a workflow for deploying data-driven constitutive models in non-Newtonian multiphase flows, with a neural network trained on experimental rheometry data serving as the viscosity closure inside a Cahn&ndash;Hilliard&ndash;Navier&ndash;Stokes finite element solver.</li>
+            <li>Trained the network with Lipschitz regularization for smooth viscosity predictions and exported it in ONNX format, so the solver queries it at runtime without solver modification or network reimplementation.</li>
+            <li>Ran on a parallel octree-based adaptive mesh refinement framework that concentrates resolution at the interface, and validated the solver against benchmark shear-thinning bubble-rise cases across power-law indices and Weber numbers.</li>
+            <li>Characterized two silicone ink formulations, recorded their rise through perfluorodecalin on high-speed video, and showed simulated rise velocities within the measured spread and steady-state droplet shapes matching experiment.</li>
           </ul>
         </div>
       </div>
@@ -127,27 +128,29 @@
         <div class="what">
           <h3>Liquid Metal Dynamics in Fusion Liquid Walls</h3>
           <ul>
-            <li>Developed a novel Maxwell&ndash;Navier&ndash;Stokes solver, written in C, for single- and two-phase flow problems in the presence of electromagnetic fields.</li>
-            <li>Reformulated Maxwell's equations in their potential form to accurately represent the fusion liquid wall under study.</li>
-            <li>Incorporated the skin effect due to eddy currents, enabling precise representation of fluid behavior in unsteady electromagnetic conditions.</li>
+            <li>Modeled the free surface deformation of a liquid metal wall in Z-pinch fusion devices, where current injected from the plasma column flows through the liquid metal and the resulting Lorentz force deforms the interface.</li>
+            <li>Solved Maxwell's equations directly in their potential form, rather than the magnetic induction equation of conventional MHD, so the magnetic field can be computed when it arises from injected current and evolves with the moving interface.</li>
+            <li>Built the solver in stages within a finite volume framework: Maxwell's equations alone, then coupled with the Navier&ndash;Stokes equations for moving conductors, and finally two-phase flow with a volume fraction equation, validating each stage against analytical solutions for current-carrying wires and electrically driven flow in an annular cylinder.</li>
+            <li>Showed that the radially decaying magnetic field from the injected current produces a net downward Lorentz force and pressure buildup that deforms the free surface, with the void depth and surface elevation growing as the injected current increases.</li>
           </ul>
         </div>
       </div>
       <div class="entry">
         <div class="when">Dec 2016<br><small>Iowa State University</small></div>
         <div class="what">
-          <h3>Value-Based Design of a Satellite System</h3>
+          <h3>Value-Driven Design of a Communication Satellite</h3>
           <ul>
-            <li>Specialized in the design of complex systems and optimization, with a focus on heuristic coding techniques.</li>
-            <li>Explored the transition from traditional requirements-based design to value-based design in large-scale systems, illustrated by a satellite system.</li>
-            <li>Conducted sensitivity and uncertainty analyses to identify high-impact requirements on system value.</li>
+            <li>Studied how stakeholder preferences are communicated in the design of large-scale complex engineered systems, where requirements in traditional systems engineering and MDO act only as proxies and confine design space exploration to a feasible region.</li>
+            <li>Demonstrated the transition from a requirements-based to a value-based systems engineering framework on a commercial communication satellite, tracing each requirement back to a single-unit value function through attribute relationships captured in a design structure matrix.</li>
+            <li>Quantified the value lost by imposing requirements through value gap analysis, and used optimum sensitivity analysis to rank which requirements most affect the optimal design.</li>
+            <li>Compared tolerance-based and probabilistic representations of uncertainty, showing a significant value gap between them and the need to account for the stakeholder's risk preference through utility theory.</li>
           </ul>
         </div>
       </div>
       <div class="entry">
         <div class="when">Dec 2011<br><small>PSG College of Technology</small></div>
         <div class="what">
-          <h3>Air-Breathing PEM Fuel Cell Performance</h3>
+          <h3>Cathode Design for Air-Breathing PEM Fuel Cells</h3>
           <ul>
             <li>Studied hydrogen-fed PEM fuel cells that draw oxygen from ambient air by free convection, combining analytical, experimental, and computational approaches.</li>
             <li>Derived the maximum current density set by free-convection mass transfer at the cathode, and verified experimentally the sharp voltage drop beyond that limit.</li>
