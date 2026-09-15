@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 <header class="site-header">
@@ -67,10 +67,16 @@
         <img src="img/cylinder-wake.jpg" alt="Vorticity field showing a von Karman vortex street behind a circular cylinder" width="1400" height="215">
         <figcaption>Vortex shedding behind a circular cylinder at Re = 300, computed with a Helmholtz&ndash;Leray projection method with variational multiscale stabilization. <a href="https://arxiv.org/abs/2608.00843" target="_blank" rel="noopener">[arXiv]</a></figcaption>
       </figure>
-      <figure class="wide">
-        <img src="img/airfoil-vortices.jpg" alt="Isosurfaces of vortical structures in turbulent flow over a NACA0012 airfoil" width="1000" height="551">
-        <figcaption>Coherent vortical structures in turbulent flow over a NACA0012 airfoil at a chord Reynolds number of 6 million, computed with the semi-implicit variational multiscale formulation with exact adjoint linearization. <a href="https://arxiv.org/abs/2512.21773" target="_blank" rel="noopener">[arXiv]</a></figcaption>
-      </figure>
+      <div class="fig-row">
+        <figure>
+          <img src="img/channel-vortices.jpg" alt="Q-criterion isosurfaces in turbulent channel flow" width="1000" height="576">
+          <figcaption>Vortical structures in turbulent channel flow at a friction Reynolds number of 395, computed with the semi-implicit variational multiscale formulation with exact adjoint linearization. <a href="https://arxiv.org/abs/2512.21773" target="_blank" rel="noopener">[arXiv]</a></figcaption>
+        </figure>
+        <figure>
+          <img src="img/airfoil-vortices.jpg" alt="Isosurfaces of vortical structures in turbulent flow over a NACA0012 airfoil" width="1000" height="551">
+          <figcaption>Coherent vortical structures in turbulent flow over a NACA0012 airfoil at a chord Reynolds number of 6 million, computed with the same formulation. <a href="https://arxiv.org/abs/2512.21773" target="_blank" rel="noopener">[arXiv]</a></figcaption>
+        </figure>
+      </div>
       <figure class="wide">
         <img src="img/tgv-qcriterion.jpg" alt="Q-criterion isosurfaces of the Taylor-Green vortex at t = 0, 15, and 20" width="1400" height="507">
         <figcaption>Q-criterion isosurfaces of the decaying Taylor&ndash;Green vortex at Re = 1600, colored by velocity magnitude, at t = 0 (left), t = 15 (center), and t = 20 (right), showing the initial cellular structure, the developed turbulent state, and the decaying small-scale structures. Computed with the Helmholtz&ndash;Leray projection method with variational multiscale stabilization. <a href="https://arxiv.org/abs/2608.00843" target="_blank" rel="noopener">[arXiv]</a></figcaption>

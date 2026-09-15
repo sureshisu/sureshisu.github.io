@@ -359,7 +359,7 @@ figure.narrow img { max-width: 440px; }
   margin-bottom: 2rem;
 }
 .fig-row figure { margin: 0; }
-.fig-row figure img { max-width: 100%; width: 100%; height: auto; aspect-ratio: 700 / 806; object-fit: contain; }
+.fig-row figure img { max-width: 100%; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
 .fig-row figure img.fit { object-fit: contain; }
 @media (max-width: 640px) {
   .fig-row { grid-template-columns: 1fr; }
