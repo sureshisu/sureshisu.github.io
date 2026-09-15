@@ -103,11 +103,12 @@
       <div class="entry">
         <div class="when">Oct 2025<br><small>Translational AI Center</small></div>
         <div class="what">
-          <h3>Turbulent Flow Past an Airfoil</h3>
+          <h3>Turbulent Channel and Airfoil Flow Simulations</h3>
           <ul>
-            <li>Simulated 3D turbulent flow over a NACA0012 airfoil at a chord Reynolds number of 6 million using a variational multiscale (VMS) finite element framework.</li>
-            <li>Used the VMS formulation to separate resolved and subgrid scales, enabling turbulence modeling through variational projection without empirical closure models.</li>
-            <li>Obtained surface pressure and flow structures in good agreement with NASA CFL3D data, capturing coherent vortical features near the airfoil surface.</li>
+            <li>Carried out the three-dimensional turbulent flow simulations validating a semi-implicit, residual-based variational multiscale (VMS) finite element formulation of the incompressible Navier&ndash;Stokes equations, in which an Oseen-type linearization of convection yields an exact adjoint and removes spatial derivatives of the fine-scale velocity from the weak form.</li>
+            <li>Simulated turbulent channel flow at a friction Reynolds number of 395 on a wall-clustered mesh, obtaining mean velocity and velocity fluctuation profiles that closely match published residual-based VMS results at the same resolution.</li>
+            <li>Simulated three-dimensional turbulent flow over a NACA0012 airfoil at a chord Reynolds number of 6 million on a mesh of about 2 million nodes, with surface pressure coefficients matching experimental measurements.</li>
+            <li>Benchmarked the linear and fully implicit nonlinear VMS formulations on these problems, showing that the single linear solve per time step reduces wall-clock time by a factor of 2 to 4 at comparable accuracy.</li>
           </ul>
         </div>
       </div>
