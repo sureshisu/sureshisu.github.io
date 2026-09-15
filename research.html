@@ -84,17 +84,23 @@
         <figcaption>Liquid metal free surface (top, time increasing left to right) with the corresponding current density streamlines (middle) and magnetic field (bottom) in a model fusion liquid wall problem. Electric current injected from the Z-pinch plasma column passes through the liquid metal, and the resulting Lorentz force deforms the free surface. Computed with a Maxwell&ndash;Navier&ndash;Stokes solver. <a href="https://arxiv.org/abs/2411.11865" target="_blank" rel="noopener">[arXiv]</a></figcaption>
       </figure>
       <p class="lead">
-        My research sits at the intersection of computational fluid dynamics, electromagnetism, and
-        scientific machine learning. I develop numerical solvers and data-driven models for fluids that
-        interact with electromagnetic fields, with applications ranging from fusion energy to plasma
-        physics, and I use high-performance computing to push these simulations to realistic scales.
+        My research sits at the intersection of computational fluid dynamics, multiphysics modeling, and
+        scientific machine learning. I develop numerical solvers and data-driven models for turbulent,
+        multiphase, and electrically driven flows, including electrokinetic transport governed by the
+        Nernst&ndash;Planck equations and liquid metal flows coupled to Maxwell's equations, with applications
+        spanning aerodynamics, additive manufacturing, electrochemical systems, and fusion energy. I use
+        high-performance computing to carry these simulations to realistic scales.
       </p>
       <p>
-        Current work at the Translational AI Center focuses on variational multiscale finite element
-        methods for turbulent and multiphase flows, neural-network closures learned directly from
-        experimental data, and operator-learning surrogates for time-dependent flow over complex
-        geometries. Earlier work at Virginia Tech developed Maxwell&ndash;Navier&ndash;Stokes solvers
-        for liquid metal flows in fusion liquid walls.
+        At the Translational AI Center, my work centers on variational multiscale finite element methods for
+        the incompressible Navier&ndash;Stokes equations, including a semi-implicit formulation with exact
+        adjoint linearization and a VMS-stabilized Helmholtz&ndash;Leray projection method, validated on
+        turbulent channel, airfoil, cylinder wake, and Taylor&ndash;Green vortex flows. In parallel, I develop
+        neural-network constitutive closures for non-Newtonian multiphase flows within a
+        Cahn&ndash;Hilliard&ndash;Navier&ndash;Stokes framework, and couple the Nernst&ndash;Planck equations
+        with multiphase flow to model electrokinetic transport in electrochemical systems. Earlier work at
+        Virginia Tech developed Maxwell&ndash;Navier&ndash;Stokes solvers for liquid metal free surface
+        dynamics in fusion liquid walls.
       </p>
     </section>
 
