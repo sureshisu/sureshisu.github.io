@@ -313,6 +313,7 @@ small, .muted { color: var(--muted); }
 .pub .authors { font-size: 0.95rem; margin-bottom: 0.15rem; }
 .pub .authors .me { font-weight: 700; color: var(--text); }
 .pub .venue { color: var(--muted); font-size: 0.92rem; font-style: italic; margin-bottom: 0.4rem; }
+.pub .note { color: var(--muted); font-size: 0.82rem; margin-bottom: 0.15rem; }
 .pub .links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .btn-link {
   display: inline-block;
